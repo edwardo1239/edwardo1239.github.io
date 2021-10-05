@@ -3,19 +3,30 @@
 body {
   background-image: url("/images/pattern-background-desktop.svg");
   background-repeat: no-repeat;
+  background-size: 100%;
   font-family: "Red Hat Display", sans-serif;
- height: 750px;
+  height: 750px;
   display:flex;
   place-items: center;
   justify-content: center;
 }
 
+@media screen and (max-width: 400px) {
+    body{
+        background-image: url("/images/pattern-background-mobile.svg");
+    }
+    .content{
+        width: 90%;
+    }
+    
+}
 
 .content {
     background-color:rgb(255, 255, 255);
-  width: 405px;
-  height: 720;
+  width: 410px;
+  
   border-radius: 25px;
+  box-sizing: border-box;
   display:flex;
   place-items: center;
   justify-content: center;
@@ -118,4 +129,6 @@ button.hover{
 .attribution {
     font-size: 10px;
     padding-bottom: 5px;
+    
 }
+
